@@ -25,5 +25,5 @@
     <td><img src = 'https://user-images.githubusercontent.com/77375223/125194591-e8904580-e28c-11eb-9f4e-3cf13dbdcefc.jpg' width = 100 height = 70></td>
   </tr>
 </table>
-  
+총 15가지의 새를 구분하는 모델을 직접 구성하여 kaggle의 리더보드 상위에 위치하는 것을 목표로 한다.
       
