@@ -1,6 +1,6 @@
 # Detect-the-Birds
 
-### Overview
+# Overview
 <table>
   <tr>
     <td><img src = 'https://user-images.githubusercontent.com/77375223/125194573-df9f7400-e28c-11eb-9c67-37880ee88029.jpg' width = 100 height = 70></td>
@@ -28,7 +28,7 @@
 <br>
 총 15가지의 새를 구분하는 CNN모델을 직접 구성하여 kaggle의 리더보드 상위에 위치하는 것을 목표로 한다.
 
-### Data Preprocessing
+# Data Preprocessing
 <img src = 'https://user-images.githubusercontent.com/77375223/125220971-778b7500-e302-11eb-97e6-3e4cc02ef529.png' width = 400 height = 350>
 
 데이터에 맞는 정규화를 진행해주기위해 각각 채널에 대해 평균, 분산값을 구하여 Data normalization을 진행해주었습니다.
@@ -43,9 +43,9 @@ transforms.Grayscale(0.1) : 10%확률로 흑백 이미지로 변환해주는 함
 transforms.ToTensor : 데이터의 타입을 Tensor로 변경해주는 함수입니다. <br>
 transforms.Normalize : 위에서 구한 각 채널의 평균, 분산을 통하여 normalizataion을 적용해주는 함수입니다. <br>
 
-### model
+# model
 
-# 1st model
+### 1st model
 <img src = 'https://user-images.githubusercontent.com/77375223/125222191-925ee900-e304-11eb-8a25-3b8d4140dca1.png'>
 처음엔 간단한 모델로 성능을 측정해 보았습니다. 해당 모델로 파라미터를 튜닝했을 때 valiation의 경우 80%, leader board에서 70%의 성능을 이루어 냈습니다.
 해당 모델로는 최고의 성능을 낼 수 없다고 판단하여 조금 더 깊은 모델을 구성해 보았습니다.
