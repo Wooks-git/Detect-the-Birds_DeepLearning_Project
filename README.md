@@ -47,5 +47,18 @@ transforms.Normalize : 위에서 구한 각 채널의 평균, 분산을 통하�
 
 ### 1st model
 <img src = 'https://user-images.githubusercontent.com/77375223/125222191-925ee900-e304-11eb-8a25-3b8d4140dca1.png'>
-처음엔 간단한 모델로 성능을 측정해 보았습니다. 해당 모델로 파라미터를 튜닝했을 때 valiation의 경우 80%, leader board에서 70%의 성능을 이루어 냈습니다.
-해당 모델로는 최고의 성능을 낼 수 없다고 판단하여 조금 더 깊은 모델을 구성해 보았습니다.
+처음엔 간단한 모델로 성능을 측정해 보았습니다. 해당 모델로 파라미터를 튜닝했을 때 valiation의 경우 80%, leader board에서 70%의 성능을 이루어 냈습니다. <br>
+해당 모델의 경우 파라미터를 다양하게 바꾸어 보았는데 계속 제자리 걸음이어서 좋은 feature map을 잘 추출해내지 못하는 것 같아 avg pooling을 사용하여 2번째 모델을 구성해 보았습니다.
+하지만 그럼에도 성능의 개선이 없어 모델을 조금 더 깊게 구성해야 한다고 생각했습니다. 그래서 조금 더 딥한 모델을 구성했는데, cuda memory가 터지는 오류가 발생하였습니다.
+그래서 1x1 convolution을 사용하여 채널수를 조정해 조금 더 깊은 모델을 아래와 같이 구성해 보았습니다.
+
+### 2nd model
+<img src = 'https://user-images.githubusercontent.com/77375223/125225075-96413a00-e309-11eb-8967-69bf878c69dd.JPG'>
+해당 모델은 1x1 convolution을 사용하여 구성한 모델입니다. 채널수를 조정하여 파라미터 수를 줄이면서, 모델의 깊이는 더 깊어지도록 모델을 설정해보았습니다. 
+해당 모델로 좋은 성능을 거둘 수 있었고, 최종적으로 84%의 성능을 거둘 수 있었습니다.
+
+# conclusion
+<img src = 'https://user-images.githubusercontent.com/77375223/125225375-28e1d900-e30a-11eb-90db-db671674c615.JPG'>
+
+총 37명 중 4등을 하는 순위를 기록했습니다.
+
