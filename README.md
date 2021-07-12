@@ -29,10 +29,10 @@
 총 15가지의 새를 구분하는 CNN모델을 직접 구성하여 kaggle의 리더보드 상위에 위치하는 것을 목표로 한다.
 
 ### Data Preprocessing
-<img src = 'https://user-images.githubusercontent.com/77375223/125220971-778b7500-e302-11eb-97e6-3e4cc02ef529.png'>
+<img src = 'https://user-images.githubusercontent.com/77375223/125220971-778b7500-e302-11eb-97e6-3e4cc02ef529.png' width = 400 height = 350>
 데이터에 맞는 정규화를 진행해주기위해 각각 채널에 대해 평균, 분산값을 구하여 Data normalization을 진행해주었습니다.
 
-<img src = 'https://user-images.githubusercontent.com/77375223/125220970-765a4800-e302-11eb-8385-d4eaaab505be.png' width = 400 height = 350>
+<img src = 'https://user-images.githubusercontent.com/77375223/125220970-765a4800-e302-11eb-8385-d4eaaab505be.png'>
 train과 validation에 대한 augmentation을 진행해 주었습니다. <br>
 transforms.Resize : input 이미지의 size를 통일해주기 위해서 적용하였습니다. (256x256) <br>
 transforms.CenterCrop : 중앙에 학습에 필요한 정보(Bird image)가 더 많을 것으로 생각하여 적용해 주었습니다. <br>
