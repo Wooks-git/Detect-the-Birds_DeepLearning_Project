@@ -33,7 +33,7 @@
 데이터에 맞는 정규화를 진행해주기위해 각각 채널에 대해 평균, 분산값을 구하여 Data normalization을 진행해주었습니다.
 
 <img src = 'https://user-images.githubusercontent.com/77375223/125220970-765a4800-e302-11eb-8385-d4eaaab505be.png'>
-train과 validation에 대한 augmentation을 진행해 주었습니다. <br>
+<br>
 transforms.Resize : input 이미지의 size를 통일해주기 위해서 적용하였습니다. (256x256) <br>
 transforms.CenterCrop : 중앙에 학습에 필요한 정보(Bird image)가 더 많을 것으로 생각하여 적용해 주었습니다. <br>
 transforms.RandomHorizontalFlip(0.5) : 50%확률로 Y축 방향으로 flip을 적용시켜주는 함수입니다. <br>
@@ -41,3 +41,5 @@ transforms.RandomRotation(10) : 랜덤으로 Image의 각도를 10도 만큼 변
 transforms.Grayscale(0.1) : 10%확률로 흑백 이미지로 변환해주는 함수입니다. <br>
 transforms.ToTensor : 데이터의 타입을 Tensor로 변경해주는 함수입니다. <br>
 transforms.Normalize : 위에서 구한 각 채널의 평균, 분산을 통하여 normalizataion을 적용해주는 함수입니다. <br>
+
+### model
